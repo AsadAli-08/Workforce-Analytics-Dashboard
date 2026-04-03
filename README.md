@@ -52,6 +52,16 @@ The objective of this project is to transform fragmented HR data into actionable
           Totals/ Averages
   *  Visuals :
           Unit-Location-Cadre-Grade wise Manpower Cost (Matrix)/ Function-Cadre-Grade wise Manpower Cost (Matrix) / Cadre-Grade wise Manpower Cost (Column Chart) / Employee wise Manpower Cost Details (Table)
+
+  ###  Workforce Diversity  :
+  *  Filters :
+          Unit/ Location/ Function/ Cadre/ Grade/ Gender/ Category/ Special Ability/ Religion
+  *  Metrics :
+          Gender wise Manpower Breakup/ Category wise Manpower Breakup/ Special Ability wise Manpower Breakup/ Religion wise Manpower Breakup
+  *  Buttons  :
+          Counts/ Averages
+  *  Visuals :
+          Unit-Cadre-Grade wise Breakup (Matrix)/ Function-Cadre-Grade wise Breakup (Matrix) / Employee wise Manpower Details (Table)
     
   ###  Workforce Mobility  :
   *  Filters :
