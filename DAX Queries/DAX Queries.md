@@ -136,6 +136,161 @@
           DATEDIFF ( Fact Emp Master[DOB], TODAY (), YEAR )
 
 
-###  Workforce Mobility  :
-
 ###  Workforce Attrition  :
+
+*      Turnover Rate =
+                    VAR mpp_start =
+                        COUNTX (
+                            FILTER (
+                                'Emp Master for Name',
+                                'Emp Master for Name'[DOJ] <= FIRSTDATE ( 'Start Date Table'[Start Date] )
+                                    && 'Emp Master for Name'[DOR] >= FIRSTDATE ( 'Start Date Table'[Start Date] )
+                            ),
+                            'Emp Master for Name'[Staff No.]
+                        )
+                    VAR mpp_end =
+                        COUNTX (
+                            FILTER (
+                                'Emp Master for Name',
+                                'Emp Master for Name'[DOJ] <= LASTDATE ( 'End Date Table'[End Date] )
+                                    && 'Emp Master for Name'[DOR] >= LASTDATE ( 'End Date Table'[End Date] )
+                            ),
+                            'Emp Master for Name'[Staff No.]
+                        )
+                    VAR mpp_avg = ( mpp_start + mpp_end ) / 2
+                    RETURN
+                        COUNT ( PIS_EMP_ACTIONS_DET[Staff No.] ) / mpp_avg
+
+
+*      Voluntary TO Rate =
+                    VAR mpp_start =
+                        COUNTX (
+                            FILTER (
+                                'Emp Master for Name',
+                                'Emp Master for Name'[DOJ] <= FIRSTDATE ( 'Start Date Table'[Start Date] )
+                                    && 'Emp Master for Name'[DOR] >= FIRSTDATE ( 'Start Date Table'[Start Date] )
+                            ),
+                            'Emp Master for Name'[Staff No.]
+                        )
+                    VAR mpp_end =
+                        COUNTX (
+                            FILTER (
+                                'Emp Master for Name',
+                                'Emp Master for Name'[DOJ] <= LASTDATE ( 'End Date Table'[End Date] )
+                                    && 'Emp Master for Name'[DOR] >= LASTDATE ( 'End Date Table'[End Date] )
+                            ),
+                            'Emp Master for Name'[Staff No.]
+                        )
+                    VAR mpp_avg = ( mpp_start + mpp_end ) / 2
+                    VAR vol_attrition =
+                        COUNTX (
+                            FILTER (
+                                PIS_EMP_ACTIONS_DET,
+                                PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "DP"
+                                    || AND (
+                                        PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BR",
+                                        PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N2"
+                                            || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N4"
+                                    )
+                                    || AND (
+                                        PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BS",
+                                        PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N0"
+                                            || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N2"
+                                            || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N3"
+                                    )
+                            ),
+                            PIS_EMP_ACTIONS_DET[Staff No.]
+                        )
+                    RETURN
+                        vol_attrition / mpp_avg
+
+  *        Voluntary Turnover =
+                      COUNTX (
+                          FILTER (
+                              PIS_EMP_ACTIONS_DET,
+                              PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "DP"
+                                  || AND (
+                                      PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BR",
+                                      PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N2"
+                                          || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N4"
+                                  )
+                                  || AND (
+                                      PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BS",
+                                      PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N0"
+                                          || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N2"
+                                          || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N3"
+                                  )
+                          ),
+                          PIS_EMP_ACTIONS_DET[Staff No.]
+                      )
+
+*          Involuntary Turnover =
+                            COUNT ( PIS_EMP_ACTIONS_DET[Staff No.] )
+                                - COUNTX (
+                                    FILTER (
+                                        PIS_EMP_ACTIONS_DET,
+                                        PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "DP"
+                                            || AND (
+                                                PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BR",
+                                                PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N2"
+                                                    || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N4"
+                                            )
+                                            || AND (
+                                                PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BS",
+                                                PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N0"
+                                                    || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N2"
+                                                    || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N3"
+                                            )
+                                    ),
+                                    PIS_EMP_ACTIONS_DET[Staff No.]
+                                )
+
+
+    *      Total Turnover =
+                      CALCULATE (
+                          COUNT ( PIS_EMP_ACTIONS_DET[CURR_UNIT] ),
+                          ( PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BR" )
+                              || ( PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BS" )
+                              || ( PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BT" )
+                      )
+
+
+    *      Resignations =
+                      COUNTX (
+                          FILTER (
+                              PIS_EMP_ACTIONS_DET,
+                              PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BS"
+                                  && PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N0"
+                          ),
+                          PIS_EMP_ACTIONS_DET[Staff No.]
+                      )
+
+    *      Retirements =
+                      COUNTX (
+                          FILTER ( PIS_EMP_ACTIONS_DET, PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BR" ),
+                          PIS_EMP_ACTIONS_DET[Staff No.]
+                      )
+
+
+    *    Terminations =
+                      COUNTX (
+                          FILTER ( PIS_EMP_ACTIONS_DET, PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BT" ),
+                          PIS_EMP_ACTIONS_DET[Staff No.]
+                      )
+
+  *      Deaths =
+                  COUNTX (
+                      FILTER (
+                          PIS_EMP_ACTIONS_DET,
+                          PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BS"
+                              && PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N1"
+                      ),
+                      PIS_EMP_ACTIONS_DET[Staff No.]
+                  )
+
+
+
+
+
+
+
