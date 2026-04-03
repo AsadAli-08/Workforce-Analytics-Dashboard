@@ -31,6 +31,37 @@
 
 ###  Workforce Productivity  :
 
+*  PAT as on Key_date =
+                SUMX (
+                    FILTER (
+                        'BHEL TO',
+                        'BHEL TO'[Start Date] <= LASTDATE ( Key_Date[Date] )
+                            && 'BHEL TO'[End Date] >= LASTDATE ( Key_Date[Date] )
+                    ),
+                    'BHEL TO'[PAT]
+                )
+
+
+*  PAT_per_Employee =
+                'BHEL TO'[PAT_key_date] * 100 / 'Emp Master for Name'[Count_key_date]
+
+*  TO_key_date =
+                SUMX (
+                    FILTER (
+                        'BHEL TO',
+                        'BHEL TO'[Start Date] <= LASTDATE ( Key_Date[Date] )
+                            && 'BHEL TO'[End Date] >= LASTDATE ( Key_Date[Date] )
+                    ),
+                    'BHEL TO'[Revenue]
+                )
+
+
+
+*  Revenue_per_employee =
+                'BHEL TO'[TO_key_date] * 100 / 'Emp Master for Name'[Count_key_date]
+
+
+
 ###  Workforce Cost Analytics  :
 
 ###  Workforce Diversity  :
