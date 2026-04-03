@@ -67,10 +67,10 @@
 ###  Workforce Cost Analytics  :
 
 *      Monthly Gross Pay =
-              PIS_EMP_BASIC_PAY[Basic Pay] + PIS_EMP_BASIC_PAY[DA] + PIS_EMP_BASIC_PAY[Cafetaria] + PIS_EMP_BASIC_PAY[HRA] + PIS_EMP_BASIC_PAY[PF/Pension] +    PIS_EMP_BASIC_PAY[Basic Misc] + PIS_EMP_BASIC_PAY[Dep Allw] + PIS_EMP_BASIC_PAY[Susp Allw] + PIS_EMP_BASIC_PAY[Other Ret. Benefits]
+              FACT_EMP_SALARY[Basic Pay] + FACT_EMP_SALARY[DA] + FACT_EMP_SALARY[Cafetaria] + FACT_EMP_SALARY[HRA] + FACT_EMP_SALARY[PF/Pension] +    FACT_EMP_SALARY[Basic Misc] + FACT_EMP_SALARY[Dep Allw] + FACT_EMP_SALARY[Susp Allw] + FACT_EMP_SALARY[Other Ret. Benefits]
 
 *      Annual Gross Pay =
-                PIS_EMP_BASIC_PAY[Monthly Gross Pay] * 12
+                FACT_EMP_SALARY[Monthly Gross Pay] * 12
 
 
      
