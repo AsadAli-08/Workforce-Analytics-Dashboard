@@ -76,6 +76,21 @@
      
 ###  Workforce Diversity  :
 
+*      Female % =
+              DIVIDE (
+                  CALCULATE (
+                      COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
+                      KEEPFILTERS ( PIS_EMPLOYEE_MASTER[Gender] = "Female" )
+                  ),
+                  CALCULATE (
+                      COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
+                      REMOVEFILTERS ( PIS_EMPLOYEE_MASTER[Gender] )
+                  ),
+                  0
+              )
+
+
+
 ###  Workforce Age  :
 
 ###  Workforce Mobility  :
