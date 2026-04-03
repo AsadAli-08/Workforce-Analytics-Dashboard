@@ -59,7 +59,7 @@
 
 
 
-*  Revenue_per_employee =
+*      Revenue_per_employee =
                 'BHEL TO'[TO_key_date] * 100 / 'Emp Master for Name'[Count_key_date]
 
 
