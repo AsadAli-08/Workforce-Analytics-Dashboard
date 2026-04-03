@@ -32,25 +32,50 @@ The objective of this project is to transform fragmented HR data into actionable
           Key Date/ Unit/ Location/ Function/ Cadre/ Grade
   *  Metrics :
           Real time Manpower Count
+  *  Buttons  :
+          Counts / Percentage %
   *  Visuals :
           Cadre-Grade wise Manpower Distribution (Column Chart)/ Unit wise Manpower Distribution (Column Chart)/ Function wise Manpower Distribution (Bar Chart)/ Unit-Location-Cadre-Grade wise Manpower Distribution (Matrix)/ Function-Cadre-Grade wise Manpower Distribution (Matrix) / Employee wise Master Date (Table)
     
   ###  Workforce Productivity & Efficiency  :
-       *  Filters :
-       *  Metrics :
-       *  Visuals :
+  *  Filters :
+          Key Date/ Unit/ Location/ Function/ Cadre/ Grade
+  *  Metrics :
+          Real time Manpower Count
+  *  Buttons  :
+          Counts / Percentage %
+  *  Visuals :
+          Cadre-Grade wise Manpower Distribution (Column Chart)/ Unit wise Manpower Distribution (Column Chart)/ Function wise Manpower Distribution (Bar Chart)/ Unit-Location-Cadre-Grade wise Manpower Distribution (Matrix)/ Function-Cadre-Grade wise Manpower Distribution (Matrix) / Employee wise Master Date (Table)
     
   ###  Workforce Cost Analytics  :
-       *  Filters :
-       *  Metrics :
-       *  Visuals :
+  *  Filters :
+          Key Date/ Unit/ Location/ Function/ Cadre/ Grade
+  *  Metrics :
+          Real time Manpower Count
+  *  Buttons  :
+          Counts / Percentage %
+  *  Visuals :
+          Cadre-Grade wise Manpower Distribution (Column Chart)/ Unit wise Manpower Distribution (Column Chart)/ Function wise Manpower Distribution (Bar Chart)/ Unit-Location-Cadre-Grade wise Manpower Distribution (Matrix)/ Function-Cadre-Grade wise Manpower Distribution (Matrix) / Employee wise Master Date (Table)
     
   ###  Workforce Mobility  :
-       *  Filters :
-       *  Metrics :
-       *  Visuals :
+  *  Filters :
+          Key Date/ Unit/ Location/ Function/ Cadre/ Grade
+  *  Metrics :
+          Real time Manpower Count
+  *  Buttons  :
+          Counts / Percentage %
+  *  Visuals :
+          Cadre-Grade wise Manpower Distribution (Column Chart)/ Unit wise Manpower Distribution (Column Chart)/ Function wise Manpower Distribution (Bar Chart)/ Unit-Location-Cadre-Grade wise Manpower Distribution (Matrix)/ Function-Cadre-Grade wise Manpower Distribution (Matrix) / Employee wise Master Date (Table)
     
   ###  Workforce Attrition  :
+    *  Filters :
+          Key Date/ Unit/ Location/ Function/ Cadre/ Grade
+  *  Metrics :
+          Real time Manpower Count
+  *  Buttons  :
+          Counts / Percentage %
+  *  Visuals :
+          Cadre-Grade wise Manpower Distribution (Column Chart)/ Unit wise Manpower Distribution (Column Chart)/ Function wise Manpower Distribution (Bar Chart)/ Unit-Location-Cadre-Grade wise Manpower Distribution (Matrix)/ Function-Cadre-Grade wise Manpower Distribution (Matrix) / Employee wise Master Date (Table)
 
 
 
