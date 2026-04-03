@@ -39,13 +39,9 @@ The objective of this project is to transform fragmented HR data into actionable
     
   ###  Workforce Productivity & Efficiency  :
   *  Filters :
-          Key Date/ Unit/ Location/ Function/ Cadre/ Grade
-  *  Metrics :
-          Real time Manpower Count
-  *  Buttons  :
-          Counts / Percentage %
+          Period/ Unit/ Location/ Function/ Cadre/ Grade
   *  Visuals :
-          Cadre-Grade wise Manpower Distribution (Column Chart)/ Unit wise Manpower Distribution (Column Chart)/ Function wise Manpower Distribution (Bar Chart)/ Unit-Location-Cadre-Grade wise Manpower Distribution (Matrix)/ Function-Cadre-Grade wise Manpower Distribution (Matrix) / Employee wise Master Date (Table)
+          Revenue per Employee-Profit After Tax per Employee Trend (Line Chart)/ Revenue-PAT-Manpower Trend (Line Chart)/ Financial Year wise PAT per Employee & Revenue per Employee (Matrix)/ Financial Year wise PAT per Employee & Revenue per Employee (Matrix)
     
   ###  Workforce Cost Analytics  :
   *  Filters :
