@@ -92,12 +92,12 @@
 *      Ethnicity % =
               DIVIDE (
                   CALCULATE (
-                      COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
-                      KEEPFILTERS ( PIS_EMPLOYEE_MASTER[Category] <> "Gen" )
+                      COUNT ( Fact Emp Master[Staff No.] ),
+                      KEEPFILTERS ( Fact Emp Master[Category] <> "Gen" )
                   ),
                   CALCULATE (
-                      COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
-                      REMOVEFILTERS ( PIS_EMPLOYEE_MASTER[Category] )
+                      COUNT ( Fact Emp Master[Staff No.] ),
+                      REMOVEFILTERS ( Fact Emp Master[Category] )
                   ),
                   0
               )
@@ -106,12 +106,12 @@
 *      Specially Abled % =
               DIVIDE (
                   CALCULATE (
-                      COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
-                      KEEPFILTERS ( PIS_EMPLOYEE_MASTER[PHYSICALLY_CHALLENGE] = "Yes" )
+                      COUNT ( Fact Emp Master[Staff No.] ),
+                      KEEPFILTERS ( Fact Emp Master[PHYSICALLY_CHALLENGE] = "Yes" )
                   ),
                   CALCULATE (
-                      COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
-                      REMOVEFILTERS ( PIS_EMPLOYEE_MASTER[Special Ability] )
+                      COUNT ( Fact Emp Master[Staff No.] ),
+                      REMOVEFILTERS ( Fact Emp Master[Special Ability] )
                   ),
                   0
               )
@@ -120,12 +120,12 @@
 *      Minority % =
               DIVIDE (
                   CALCULATE (
-                      COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
-                      KEEPFILTERS ( PIS_EMPLOYEE_MASTER[Religion] <> "Hinduism" )
+                      COUNT ( Fact Emp Master[Staff No.] ),
+                      KEEPFILTERS ( Fact Emp Master[Religion] <> "Hinduism" )
                   ),
                   CALCULATE (
-                      COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
-                      REMOVEFILTERS ( PIS_EMPLOYEE_MASTER[Religion] )
+                      COUNT ( Fact Emp Master[Staff No.] ),
+                      REMOVEFILTERS ( Fact Emp Master[Religion] )
                   ),
                   0
               )
