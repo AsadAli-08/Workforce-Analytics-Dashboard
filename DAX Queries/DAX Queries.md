@@ -79,12 +79,53 @@
 *      Female % =
               DIVIDE (
                   CALCULATE (
+                      COUNT ( Fact Emp Master[Staff No.] ),
+                      KEEPFILTERS ( Fact Emp Master[Gender] = "Female" )
+                  ),
+                  CALCULATE (
+                      COUNT ( Fact Emp Master[Staff No.] ),
+                      REMOVEFILTERS ( Fact Emp Master[Gender] )
+                  ),
+                  0
+              )
+
+*      Ethnicity % =
+              DIVIDE (
+                  CALCULATE (
                       COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
-                      KEEPFILTERS ( PIS_EMPLOYEE_MASTER[Gender] = "Female" )
+                      KEEPFILTERS ( PIS_EMPLOYEE_MASTER[Category] <> "Gen" )
                   ),
                   CALCULATE (
                       COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
-                      REMOVEFILTERS ( PIS_EMPLOYEE_MASTER[Gender] )
+                      REMOVEFILTERS ( PIS_EMPLOYEE_MASTER[Category] )
+                  ),
+                  0
+              )
+
+
+*      Specially Abled % =
+              DIVIDE (
+                  CALCULATE (
+                      COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
+                      KEEPFILTERS ( PIS_EMPLOYEE_MASTER[PHYSICALLY_CHALLENGE] = "Yes" )
+                  ),
+                  CALCULATE (
+                      COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
+                      REMOVEFILTERS ( PIS_EMPLOYEE_MASTER[Special Ability] )
+                  ),
+                  0
+              )
+
+
+*      Minority % =
+              DIVIDE (
+                  CALCULATE (
+                      COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
+                      KEEPFILTERS ( PIS_EMPLOYEE_MASTER[Religion] <> "Hinduism" )
+                  ),
+                  CALCULATE (
+                      COUNT ( PIS_EMPLOYEE_MASTER[Staff No.] ),
+                      REMOVEFILTERS ( PIS_EMPLOYEE_MASTER[Religion] )
                   ),
                   0
               )
