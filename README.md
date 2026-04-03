@@ -87,5 +87,18 @@ The objective of this project is to transform fragmented HR data into actionable
   *  Visuals :
           Turnover & Involuntary Turnover Rate Trend (Line Chart)/ Unit-Cadre-Grade-Year wise Turnover & Involuntary Turnover Rate (Matrix)/ Employee wise Attrition Details (Table)
 
+##  Key Insights  :
+
+## Business Impact  :
+
+*  Enabled leadership with a unified workforce intelligence platform, reducing dependency on fragmented reports
+*  Improved visibility into workforce cost vs productivity, supporting data-driven cost optimization decisions
+*  Identified high-risk attrition segments, enabling proactive retention strategies
+*  Streamlined HR reporting processes, reducing manual effort and turnaround time
+*  Provided a scalable analytics framework that can be extended to predictive HR analytics
+
+## Author  :
+Asad Ali
+
 
 
