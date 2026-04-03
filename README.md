@@ -73,13 +73,11 @@ The objective of this project is to transform fragmented HR data into actionable
     
   ###  Workforce Mobility  :
   *  Filters :
-          Key Date/ Unit/ Location/ Function/ Cadre/ Grade
+          From Date/ To Date/ Unit/ Cadre/ Grade
   *  Metrics :
-          Real time Manpower Count
-  *  Buttons  :
-          Counts / Percentage %
+          Transfer Ins/ Transfer Outs
   *  Visuals :
-          Cadre-Grade wise Manpower Distribution (Column Chart)/ Unit wise Manpower Distribution (Column Chart)/ Function wise Manpower Distribution (Bar Chart)/ Unit-Location-Cadre-Grade wise Manpower Distribution (Matrix)/ Function-Cadre-Grade wise Manpower Distribution (Matrix) / Employee wise Master Date (Table)
+          Unit-Year wise Transfer Ins & Transfer Outs (Matrix)/ Cadre-Grade-Year wise Transfer Ins & Transfer Outs (Matrix)/ Transfer Ins & Transfer Outs Trend (Line Chart)/ Employee wise Transfer Details (Table)
     
   ###  Workforce Attrition  :
     *  Filters :
