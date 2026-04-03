@@ -33,7 +33,7 @@
 
 
 
-*      PAT as on Key_date =
+*      PAT as on Key date =
                 SUMX (
                     FILTER (
                         'BHEL TO',
@@ -44,10 +44,10 @@
                 )
 
 
-*      PAT_per_Employee =
-                'BHEL TO'[PAT_key_date] * 100 / 'Emp Master for Name'[Count_key_date]
+*      PAT per Employee =
+                'BHEL TO'[PAT as on Key_date] * 100 / 'Fact Emp Master'[Manpower as on Key Date]
 
-*      TO_key_date =
+*      Revenue as on Key date =
                 SUMX (
                     FILTER (
                         'BHEL TO',
@@ -59,8 +59,8 @@
 
 
 
-*      Revenue_per_employee =
-                'BHEL TO'[TO_key_date] * 100 / 'Emp Master for Name'[Count_key_date]
+*      Revenue per Employee =
+                'BHEL TO'[Revenue as on Key date] * 100 / 'Fact Emp Master'[Manpower as on Key Date]
 
 
 
