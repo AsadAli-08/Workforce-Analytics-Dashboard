@@ -62,6 +62,14 @@ The objective of this project is to transform fragmented HR data into actionable
           Counts/ Averages
   *  Visuals :
           Unit-Cadre-Grade wise Breakup (Matrix)/ Function-Cadre-Grade wise Breakup (Matrix) / Employee wise Manpower Details (Table)
+
+ ###  Workforce Age  :
+  *  Filters :
+          Unit/ Location/ Function/ Cadre/ Grade
+  *  Metrics :
+          Real time Manpower Count/ Average Age
+  *  Visuals :
+          Unit-Location wise Average Age (Matrix)/ Function wise Average Age (Matrix)/ Age Group wise Manpower Breakup (Histogram)/ Employee wise Age Details (Table)
     
   ###  Workforce Mobility  :
   *  Filters :
