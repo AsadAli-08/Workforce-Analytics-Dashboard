@@ -80,7 +80,7 @@ The objective of this project is to transform fragmented HR data into actionable
           Unit-Year wise Transfer Ins & Transfer Outs (Matrix)/ Cadre-Grade-Year wise Transfer Ins & Transfer Outs (Matrix)/ Transfer Ins & Transfer Outs Trend (Line Chart)/ Employee wise Transfer Details (Table)
     
   ###  Workforce Attrition  :
-    *  Filters :
+  *  Filters :
           From Date/ To Date/ Unit/ Location/ Cadre/ Grade/ Reason for Attrition
   *  Metrics :
           Turnover Rate/ Voluntary TO Rate/ Total Turnover/ Involuntary Turnover/ Voluntary Turnover/ Retirements/ Resignations/ Deaths/ Terminations
