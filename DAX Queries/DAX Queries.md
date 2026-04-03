@@ -117,7 +117,7 @@
               )
 
 
-*      Minority % =
+*      Religious Minority % =
               DIVIDE (
                   CALCULATE (
                       COUNT ( Fact Emp Master[Staff No.] ),
@@ -130,9 +130,11 @@
                   0
               )
 
-
-
 ###  Workforce Age  :
+
+*      Age =
+          DATEDIFF ( Fact Emp Master[DOB], TODAY (), YEAR )
+
 
 ###  Workforce Mobility  :
 
