@@ -159,7 +159,7 @@
                         )
                     VAR mpp_avg = ( mpp_start + mpp_end ) / 2
                     RETURN
-                        COUNT ( PIS_EMP_ACTIONS_DET[Staff No.] ) / mpp_avg
+                        COUNT ( FACT_EMP_ACTIONS[Staff No.] ) / mpp_avg
 
 
 *      Voluntary TO Rate =
@@ -185,21 +185,21 @@
                     VAR vol_attrition =
                         COUNTX (
                             FILTER (
-                                PIS_EMP_ACTIONS_DET,
-                                PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "DP"
+                                FACT_EMP_ACTIONS,
+                                FACT_EMP_ACTIONS[ACTION_TYPE] = "DP"
                                     || AND (
-                                        PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BR",
-                                        PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N2"
-                                            || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N4"
+                                        FACT_EMP_ACTIONS[ACTION_TYPE] = "BR",
+                                        FACT_EMP_ACTIONS[ACTION_REASON] = "N2"
+                                            || FACT_EMP_ACTIONS[ACTION_REASON] = "N4"
                                     )
                                     || AND (
-                                        PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BS",
-                                        PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N0"
-                                            || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N2"
-                                            || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N3"
+                                        FACT_EMP_ACTIONS[ACTION_TYPE] = "BS",
+                                        FACT_EMP_ACTIONS[ACTION_REASON] = "N0"
+                                            || FACT_EMP_ACTIONS[ACTION_REASON] = "N2"
+                                            || FACT_EMP_ACTIONS[ACTION_REASON] = "N3"
                                     )
                             ),
-                            PIS_EMP_ACTIONS_DET[Staff No.]
+                            FACT_EMP_ACTIONS[Staff No.]
                         )
                     RETURN
                         vol_attrition / mpp_avg
@@ -207,86 +207,86 @@
 *        Voluntary Turnover =
                       COUNTX (
                           FILTER (
-                              PIS_EMP_ACTIONS_DET,
-                              PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "DP"
+                              FACT_EMP_ACTIONS,
+                              FACT_EMP_ACTIONS[ACTION_TYPE] = "DP"
                                   || AND (
-                                      PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BR",
-                                      PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N2"
-                                          || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N4"
+                                      FACT_EMP_ACTIONS[ACTION_TYPE] = "BR",
+                                      FACT_EMP_ACTIONS[ACTION_REASON] = "N2"
+                                          || FACT_EMP_ACTIONS[ACTION_REASON] = "N4"
                                   )
                                   || AND (
-                                      PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BS",
-                                      PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N0"
-                                          || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N2"
-                                          || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N3"
+                                      FACT_EMP_ACTIONS[ACTION_TYPE] = "BS",
+                                      FACT_EMP_ACTIONS[ACTION_REASON] = "N0"
+                                          || FACT_EMP_ACTIONS[ACTION_REASON] = "N2"
+                                          || FACT_EMP_ACTIONS[ACTION_REASON] = "N3"
                                   )
                           ),
-                          PIS_EMP_ACTIONS_DET[Staff No.]
+                          FACT_EMP_ACTIONS[Staff No.]
                       )
 
 *          Involuntary Turnover =
-                            COUNT ( PIS_EMP_ACTIONS_DET[Staff No.] )
+                            COUNT ( FACT_EMP_ACTIONS[Staff No.] )
                                 - COUNTX (
                                     FILTER (
-                                        PIS_EMP_ACTIONS_DET,
-                                        PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "DP"
+                                        FACT_EMP_ACTIONS,
+                                        FACT_EMP_ACTIONS[ACTION_TYPE] = "DP"
                                             || AND (
-                                                PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BR",
-                                                PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N2"
-                                                    || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N4"
+                                                FACT_EMP_ACTIONS[ACTION_TYPE] = "BR",
+                                                FACT_EMP_ACTIONS[ACTION_REASON] = "N2"
+                                                    || FACT_EMP_ACTIONS[ACTION_REASON] = "N4"
                                             )
                                             || AND (
-                                                PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BS",
-                                                PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N0"
-                                                    || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N2"
-                                                    || PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N3"
+                                                FACT_EMP_ACTIONS[ACTION_TYPE] = "BS",
+                                                FACT_EMP_ACTIONS[ACTION_REASON] = "N0"
+                                                    || FACT_EMP_ACTIONS[ACTION_REASON] = "N2"
+                                                    || FACT_EMP_ACTIONS[ACTION_REASON] = "N3"
                                             )
                                     ),
-                                    PIS_EMP_ACTIONS_DET[Staff No.]
+                                    FACT_EMP_ACTIONS[Staff No.]
                                 )
 
 
 *        Total Turnover =
                       CALCULATE (
-                          COUNT ( PIS_EMP_ACTIONS_DET[CURR_UNIT] ),
-                          ( PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BR" )
-                              || ( PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BS" )
-                              || ( PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BT" )
+                          COUNT ( FACT_EMP_ACTIONS[CURR_UNIT] ),
+                          ( FACT_EMP_ACTIONS[ACTION_TYPE] = "BR" )
+                              || ( FACT_EMP_ACTIONS[ACTION_TYPE] = "BS" )
+                              || ( FACT_EMP_ACTIONS[ACTION_TYPE] = "BT" )
                       )
 
 
 *        Resignations =
                       COUNTX (
                           FILTER (
-                              PIS_EMP_ACTIONS_DET,
-                              PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BS"
-                                  && PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N0"
+                              FACT_EMP_ACTIONS,
+                              FACT_EMP_ACTIONS[ACTION_TYPE] = "BS"
+                                  && FACT_EMP_ACTIONS[ACTION_REASON] = "N0"
                           ),
-                          PIS_EMP_ACTIONS_DET[Staff No.]
+                          FACT_EMP_ACTIONS[Staff No.]
                       )
 
 *        Retirements =
                       COUNTX (
-                          FILTER ( PIS_EMP_ACTIONS_DET, PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BR" ),
-                          PIS_EMP_ACTIONS_DET[Staff No.]
+                          FILTER ( FACT_EMP_ACTIONS, FACT_EMP_ACTIONS[ACTION_TYPE] = "BR" ),
+                          FACT_EMP_ACTIONS[Staff No.]
                       )
 
 
 
 *        Terminations =
                       COUNTX (
-                          FILTER ( PIS_EMP_ACTIONS_DET, PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BT" ),
-                          PIS_EMP_ACTIONS_DET[Staff No.]
+                          FILTER ( FACT_EMP_ACTIONS, FACT_EMP_ACTIONS[ACTION_TYPE] = "BT" ),
+                          FACT_EMP_ACTIONS[Staff No.]
                       )
 
 *         Deaths =
                   COUNTX (
                       FILTER (
-                          PIS_EMP_ACTIONS_DET,
-                          PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BS"
-                              && PIS_EMP_ACTIONS_DET[ACTION_REASON] = "N1"
+                          FACT_EMP_ACTIONS,
+                          FACT_EMP_ACTIONS[ACTION_TYPE] = "BS"
+                              && FACT_EMP_ACTIONS[ACTION_REASON] = "N1"
                       ),
-                      PIS_EMP_ACTIONS_DET[Staff No.]
+                      FACT_EMP_ACTIONS[Staff No.]
                   )
 
 
