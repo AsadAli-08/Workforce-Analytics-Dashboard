@@ -246,7 +246,7 @@
                                 )
 
 
-    *      Total Turnover =
+*      Total Turnover =
                       CALCULATE (
                           COUNT ( PIS_EMP_ACTIONS_DET[CURR_UNIT] ),
                           ( PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BR" )
@@ -255,7 +255,7 @@
                       )
 
 
-    *      Resignations =
+*       Resignations =
                       COUNTX (
                           FILTER (
                               PIS_EMP_ACTIONS_DET,
@@ -265,20 +265,20 @@
                           PIS_EMP_ACTIONS_DET[Staff No.]
                       )
 
-    *      Retirements =
+*      Retirements =
                       COUNTX (
                           FILTER ( PIS_EMP_ACTIONS_DET, PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BR" ),
                           PIS_EMP_ACTIONS_DET[Staff No.]
                       )
 
 
-    *    Terminations =
+*    Terminations =
                       COUNTX (
                           FILTER ( PIS_EMP_ACTIONS_DET, PIS_EMP_ACTIONS_DET[ACTION_TYPE] = "BT" ),
                           PIS_EMP_ACTIONS_DET[Staff No.]
                       )
 
-  *      Deaths =
+*        Deaths =
                   COUNTX (
                       FILTER (
                           PIS_EMP_ACTIONS_DET,
