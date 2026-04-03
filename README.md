@@ -27,3 +27,17 @@ The objective of this project is to transform fragmented HR data into actionable
 
 ##  Power BI Dashboard  :
 
+###  Executive Overview
+
+###  Workforce Composition
+
+###  Workforce Productivity & Efficiency
+
+###  Workforce Cost Analytics
+
+###  Workforce Mobility
+
+###  Workforce Attrition
+
+
+
