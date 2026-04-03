@@ -204,7 +204,7 @@
                     RETURN
                         vol_attrition / mpp_avg
 
-  *        Voluntary Turnover =
+*        Voluntary Turnover =
                       COUNTX (
                           FILTER (
                               PIS_EMP_ACTIONS_DET,
