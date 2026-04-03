@@ -81,13 +81,11 @@ The objective of this project is to transform fragmented HR data into actionable
     
   ###  Workforce Attrition  :
     *  Filters :
-          Key Date/ Unit/ Location/ Function/ Cadre/ Grade
+          From Date/ To Date/ Unit/ Location/ Cadre/ Grade/ Reason for Attrition
   *  Metrics :
-          Real time Manpower Count
-  *  Buttons  :
-          Counts / Percentage %
+          Turnover Rate/ Voluntary TO Rate/ Total Turnover/ Involuntary Turnover/ Voluntary Turnover/ Retirements/ Resignations/ Deaths/ Terminations
   *  Visuals :
-          Cadre-Grade wise Manpower Distribution (Column Chart)/ Unit wise Manpower Distribution (Column Chart)/ Function wise Manpower Distribution (Bar Chart)/ Unit-Location-Cadre-Grade wise Manpower Distribution (Matrix)/ Function-Cadre-Grade wise Manpower Distribution (Matrix) / Employee wise Master Date (Table)
+          Turnover & Involuntary Turnover Rate Trend (Line Chart)/ Unit-Cadre-Grade-Year wise Turnover & Involuntary Turnover Rate (Matrix)/ Employee wise Attrition Details (Table)
 
 
 
