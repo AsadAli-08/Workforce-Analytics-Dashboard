@@ -142,20 +142,20 @@
                     VAR mpp_start =
                         COUNTX (
                             FILTER (
-                                'Emp Master for Name',
-                                'Emp Master for Name'[DOJ] <= FIRSTDATE ( 'Start Date Table'[Start Date] )
-                                    && 'Emp Master for Name'[DOR] >= FIRSTDATE ( 'Start Date Table'[Start Date] )
+                                'Fact Emp Master',
+                                'Fact Emp Master'[DOJ] <= FIRSTDATE ( 'Start Date Table'[Start Date] )
+                                    && 'Fact Emp Master'[DOR] >= FIRSTDATE ( 'Start Date Table'[Start Date] )
                             ),
                             'Emp Master for Name'[Staff No.]
                         )
                     VAR mpp_end =
                         COUNTX (
                             FILTER (
-                                'Emp Master for Name',
-                                'Emp Master for Name'[DOJ] <= LASTDATE ( 'End Date Table'[End Date] )
-                                    && 'Emp Master for Name'[DOR] >= LASTDATE ( 'End Date Table'[End Date] )
+                                'Fact Emp Master',
+                                'Fact Emp Master'[DOJ] <= LASTDATE ( 'End Date Table'[End Date] )
+                                    && 'Fact Emp Master'[DOR] >= LASTDATE ( 'End Date Table'[End Date] )
                             ),
-                            'Emp Master for Name'[Staff No.]
+                            'Fact Emp Master'[Staff No.]
                         )
                     VAR mpp_avg = ( mpp_start + mpp_end ) / 2
                     RETURN
@@ -166,18 +166,18 @@
                     VAR mpp_start =
                         COUNTX (
                             FILTER (
-                                'Emp Master for Name',
-                                'Emp Master for Name'[DOJ] <= FIRSTDATE ( 'Start Date Table'[Start Date] )
-                                    && 'Emp Master for Name'[DOR] >= FIRSTDATE ( 'Start Date Table'[Start Date] )
+                                'Fact Emp Master',
+                                'EFact Emp Master'[DOJ] <= FIRSTDATE ( 'Start Date Table'[Start Date] )
+                                    && 'Fact Emp Master'[DOR] >= FIRSTDATE ( 'Start Date Table'[Start Date] )
                             ),
-                            'Emp Master for Name'[Staff No.]
+                            'Fact Emp Master'[Staff No.]
                         )
                     VAR mpp_end =
                         COUNTX (
                             FILTER (
-                                'Emp Master for Name',
-                                'Emp Master for Name'[DOJ] <= LASTDATE ( 'End Date Table'[End Date] )
-                                    && 'Emp Master for Name'[DOR] >= LASTDATE ( 'End Date Table'[End Date] )
+                                'Fact Emp Master',
+                                'Fact Emp Master'[DOJ] <= LASTDATE ( 'End Date Table'[End Date] )
+                                    && 'Fact Emp Master'[DOR] >= LASTDATE ( 'End Date Table'[End Date] )
                             ),
                             'Emp Master for Name'[Staff No.]
                         )
