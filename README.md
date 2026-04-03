@@ -37,7 +37,7 @@ The objective of this project is to transform fragmented HR data into actionable
   *  Visuals :
           Cadre-Grade wise Manpower Distribution (Column Chart)/ Unit wise Manpower Distribution (Column Chart)/ Function wise Manpower Distribution (Bar Chart)/ Unit-Location-Cadre-Grade wise Manpower Distribution (Matrix)/ Function-Cadre-Grade wise Manpower Distribution (Matrix) / Employee wise Master Date (Table)
     
-  ###  Workforce Productivity & Efficiency  :
+  ###  Workforce Productivity  :
   *  Filters :
           Period/ Unit/ Location/ Function/ Cadre/ Grade
   *  Visuals :
@@ -45,13 +45,13 @@ The objective of this project is to transform fragmented HR data into actionable
     
   ###  Workforce Cost Analytics  :
   *  Filters :
-          Key Date/ Unit/ Location/ Function/ Cadre/ Grade
+          Unit/ Location/ Function/ Cadre/ Grade
   *  Metrics :
-          Real time Manpower Count
+          Real time Manpower Count/ Total Annual Manpower Cost(Cr)/ Average Annual Manpower Cost(Lacs)
   *  Buttons  :
-          Counts / Percentage %
+          Totals/ Averages
   *  Visuals :
-          Cadre-Grade wise Manpower Distribution (Column Chart)/ Unit wise Manpower Distribution (Column Chart)/ Function wise Manpower Distribution (Bar Chart)/ Unit-Location-Cadre-Grade wise Manpower Distribution (Matrix)/ Function-Cadre-Grade wise Manpower Distribution (Matrix) / Employee wise Master Date (Table)
+          Unit-Location-Cadre-Grade wise Manpower Cost (Matrix)/ Function-Cadre-Grade wise Manpower Cost (Matrix) / Cadre-Grade wise Manpower Cost (Column Chart) / Employee wise Manpower Cost Details (Table)
     
   ###  Workforce Mobility  :
   *  Filters :
