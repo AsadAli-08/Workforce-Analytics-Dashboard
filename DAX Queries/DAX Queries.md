@@ -70,7 +70,7 @@
               PIS_EMP_BASIC_PAY[Basic Pay] + PIS_EMP_BASIC_PAY[DA] + PIS_EMP_BASIC_PAY[Cafetaria] + PIS_EMP_BASIC_PAY[HRA] + PIS_EMP_BASIC_PAY[PF/Pension] +    PIS_EMP_BASIC_PAY[Basic Misc] + PIS_EMP_BASIC_PAY[Dep Allw] + PIS_EMP_BASIC_PAY[Susp Allw] + PIS_EMP_BASIC_PAY[Other Ret. Benefits]
 
 *      Annual Gross Pay =
-      PIS_EMP_BASIC_PAY[Monthly Gross Pay] * 12
+                PIS_EMP_BASIC_PAY[Monthly Gross Pay] * 12
 
 
      
