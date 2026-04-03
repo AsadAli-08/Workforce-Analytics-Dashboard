@@ -29,13 +29,10 @@ The objective of this project is to transform fragmented HR data into actionable
 
   ###  Executive Overview  :
   *  Filters :
-
           Key Date/ Unit/ Location/ Function/ Cadre/ Grade
   *  Metrics :
-
           Real time Manpower Count
   *  Visuals :
-
           Cadre-Grade wise Manpower Distribution (Column Chart)/ Unit wise Manpower Distribution (Column Chart)/ Function wise Manpower Distribution (Bar Chart)/ Unit-Location-Cadre-Grade wise Manpower Distribution (Matrix)/ Function-Cadre-Grade wise Manpower Distribution (Matrix) / Employee wise Master Date (Table)
     
   ###  Workforce Productivity & Efficiency  :
