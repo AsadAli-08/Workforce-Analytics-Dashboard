@@ -36,31 +36,31 @@
 *      PAT as on Key date =
                 SUMX (
                     FILTER (
-                        'BHEL TO',
-                        'BHEL TO'[Start Date] <= LASTDATE ( Key_Date[Date] )
-                            && 'BHEL TO'[End Date] >= LASTDATE ( Key_Date[Date] )
+                        'FACT_COMPANY_REVENUE',
+                        'ACT_COMPANY_REVENUE'[Start Date] <= LASTDATE ( Key_Date[Date] )
+                            && 'FACT_COMPANY_REVENUE'[End Date] >= LASTDATE ( Key_Date[Date] )
                     ),
                     'BHEL TO'[PAT]
                 )
 
 
 *      PAT per Employee =
-                'BHEL TO'[PAT as on Key_date] * 100 / 'Fact Emp Master'[Manpower as on Key Date]
+                'FACT_COMPANY_REVENUE'[PAT as on Key_date] * 100 / 'Fact Emp Master'[Manpower as on Key Date]
 
 *      Revenue as on Key date =
                 SUMX (
                     FILTER (
-                        'BHEL TO',
-                        'BHEL TO'[Start Date] <= LASTDATE ( Key_Date[Date] )
-                            && 'BHEL TO'[End Date] >= LASTDATE ( Key_Date[Date] )
+                        'FACT_COMPANY_REVENUE',
+                        'FACT_COMPANY_REVENUE'[Start Date] <= LASTDATE ( Key_Date[Date] )
+                            && 'FACT_COMPANY_REVENUE'[End Date] >= LASTDATE ( Key_Date[Date] )
                     ),
-                    'BHEL TO'[Revenue]
+                    'FACT_COMPANY_REVENUE'[Revenue]
                 )
 
 
 
 *      Revenue per Employee =
-                'BHEL TO'[Revenue as on Key date] * 100 / 'Fact Emp Master'[Manpower as on Key Date]
+                'FACT_COMPANY_REVENUE'[Revenue as on Key date] * 100 / 'Fact Emp Master'[Manpower as on Key Date]
 
 
 
