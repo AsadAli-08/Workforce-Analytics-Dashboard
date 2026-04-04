@@ -243,11 +243,12 @@ The objective of this project is to transform fragmented HR data into actionable
   *  Visuals :
           Turnover & Involuntary Turnover Rate Trend (Line Chart)/ Unit-Cadre-Grade-Year wise Turnover & Involuntary Turnover Rate (Matrix)/ Employee wise Attrition Details (Table)
   *  Observations   :
-      *   Voluntary attrition rate has increased over the past decade from ~4% to ~6.1%, indicating rising retention challenges
-      *   HPEP and EDN units report the highest voluntary attrition rates, highlighting localized risk areas
-      *   HPBP records the highest overall attrition rate (~6.69%) across units
-      *   Executives exhibit the highest voluntary turnover (~3%), followed by Supervisors and Workers
-      *   Within executives, mid-level grades (E2, E3, E4) show the highest attrition, suggesting pressure in the critical talent pipeline
+      *   Voluntary attrition has increased over the past decade (from ~0.47% to ~0.72%), indicating a gradual rise in employee-initiated exits
+      *   In contrast, overall attrition has declined significantly (from ~6.24% to ~3.24%), suggesting improved control over involuntary exits and retirements
+      *   HPEP, HEP, and HEEP units show the highest voluntary attrition, highlighting unit-specific retention challenges
+      *   HPBP records the highest overall attrition (~8.3%), making it a critical area for workforce stability intervention
+      *   Executives exhibit the highest voluntary turnover (~3.69%), well above Supervisors and Workers, indicating higher external mobility or internal dissatisfaction at senior levels
+      *   Within executives, mid-level grades (E2–E4) have the highest attrition (~2.1%), signaling risk in the leadership pipeline and career progression gaps
  
 
 ##  Key Insights  :
