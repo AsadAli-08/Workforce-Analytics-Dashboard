@@ -29,6 +29,28 @@ The objective of this project is to transform fragmented HR data into actionable
 
 ###  Fact Tables  :
 
+*  FACT_Employee_Master
+    *  Emp ID
+    *  Full Name
+    *  Gender
+    *  DOB
+    *  Age
+    *  Age Group
+    *  DOJ
+    *  DOR
+    *  Grade Date
+    *  Designation
+    *  Category
+    *  Religion
+    *  Special Ability
+    *  Inactive (Y/N)
+    *  Unit Code
+    *  Location Code
+    *  Cadre Code
+    *  Grade Code
+    *  Function Code
+    *  Department Code
+
 
 ###  Dimension Tables  :
 
