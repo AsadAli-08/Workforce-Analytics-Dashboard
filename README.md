@@ -71,8 +71,29 @@ The objective of this project is to transform fragmented HR data into actionable
     *   From Unit
     *   To Unit
     *   From Location
-    *   To Location      
+    *   To Location
 
+*   FACT_Employee_Salary
+    *   Emp ID
+    *   From Date
+    *   To Date
+    *   Basic Pay
+    *   DA
+    *   Stagnation
+    *   Personal Pay
+    *   Family Planning Inc
+    *   Special Perf Allw
+    *   Special Pers Pay
+    *   Service Weightage
+    *   Susp Allw
+    *   HRA
+    *   Lease
+    *   Comp Qtr
+    *   Non Prac Allw
+    *   Cafetaria
+    *   PF/Pension
+    *   Deputation Allw
+ 
 
 ###  Dimension Tables  :
 
