@@ -253,16 +253,17 @@ The objective of this project is to transform fragmented HR data into actionable
 
 ##  Key Insights  :
 
-*   Workforce is highly concentrated in a few units (~74%) and heavily skewed towards Production (~47%) and Workers (~75%), indicating operational dependency and concentration risk
-*   Business performance is increasingly productivity-driven, with revenue and PAT trends closely aligned to per-employee metrics despite declining manpower
-*   Declining PAT per employee despite recovery in revenue per employee signals margin pressure and cost inefficiencies
-*   Cost structure is volume-driven, with manufacturing units contributing ~68% of total manpower cost, while executive roles remain the most expensive on a per capita basis
-*   Significant diversity gaps exist in core operational functions (Production, Maintenance, Construction) with female participation below 2%, unlike corporate functions
-*   Workforce is aging and mid-career heavy, with a large concentration in the 41–50 age group, indicating upcoming succession and reskilling challenges
-*   High executive mobility and net inflow into Corporate Office suggest centralized talent deployment and leadership agility
-*   Rising voluntary attrition (~4% to ~6.1%) indicates increasing retention risk, especially in specific units and functions
-*   Mid-level executives (E2–E4) show highest attrition, highlighting vulnerability in the leadership pipeline
-*   Combined trends of aging workforce, rising attrition, and low diversity in operations indicate long-term workforce sustainability risks
+*   Workforce structure is highly concentrated and operations-heavy, with dependence on a few key units and Production, increasing operational and location-specific risk exposure
+*   Organization is transitioning towards a lean, productivity-driven model, where performance is driven more by efficiency (per employee metrics) than by workforce expansion
+*   Profitability is under pressure, as PAT per employee has declined despite improvements in revenue productivity, indicating margin compression and cost inefficiencies
+*   Cost base is scale-driven and concentrated in manufacturing, while executive roles remain high-cost, creating a dual cost structure (volume vs. leadership cost)
+*   Structural diversity gaps persist in core operations, especially in gender representation, highlighting challenges in building an inclusive workforce in frontline roles
+*   Workforce is aging with a strong mid-career concentration, creating succession risks and future skill gaps, particularly in leadership and supervisory roles
+*   Talent flow is centralized, with high executive mobility and net inflow into Corporate Office, indicating strategic redeployment but potential imbalance across units
+*   Attrition risk is shifting in nature — overall attrition is declining, but voluntary attrition is rising, indicating increasing employee-driven exits rather than organizational separations
+*   Critical talent segments are at risk, particularly mid-level executives (E2–E4), which are key to the leadership pipeline and operational continuity
+*   Certain units (HPBP, HPEP, HEP, HEEP) consistently show higher attrition and mobility, indicating localized organizational or engagement issues
+*   Combined trends of aging workforce, rising voluntary attrition, centralized mobility, and low diversity in operations point to a long-term workforce sustainability and resilience challenge
 
 ## Business Impact  :
 
