@@ -153,8 +153,13 @@ The objective of this project is to transform fragmented HR data into actionable
   *  Visuals :
           Cadre-Grade wise Manpower Distribution (Column Chart)/ Unit wise Manpower Distribution (Column Chart)/ Function wise Manpower Distribution (Bar Chart)/ Unit-Location-Cadre-Grade wise Manpower Distribution (Matrix)/ Function-Cadre-Grade wise Manpower Distribution (Matrix) / Employee wise Master Date (Table)
   *   Observations :
-            
-    
+      *   Workforce composition is heavily skewed towards Workers, followed by Executives and Supervisors
+      *   A few major units (HPBP, HEP, HEEP, HPEP, BAP, EDN, TP) together account for ~74% of total manpower, indicating concentration risk
+      *   Production function dominates workforce allocation, contributing ~47% of total manpower
+      *   Worker strength is largely concentrated in key units (HPBP, HPEP, HEEP, HEP), forming ~75% of total worker population
+      *   Marketing (96%) and Law (90%) functions are predominantly executive-driven, reflecting role specialization
+      *   Within Production, Workers form ~75% of manpower, highlighting operational intensity
+                 
   ###  Workforce Productivity  :
   *  Filters :
           Period/ Unit/ Location/ Function/ Cadre/ Grade
