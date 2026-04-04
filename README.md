@@ -106,13 +106,11 @@ The objective of this project is to transform fragmented HR data into actionable
     *   Location
     *   Site/Non Site/NCR   
 
-*   DIM_Cadre_Master
-    *   Cadre Code
-    *   Cadre
-
 *   DIM_Grade_Master
       *   Grade Code
       *   Grade
+      *   Cadre Code
+      *   Cadre
 
 *   DIM_Function_Master
       *   Function Code
@@ -121,26 +119,21 @@ The objective of this project is to transform fragmented HR data into actionable
 *   DIM_Unit_Master
       *   Unit Code
       *   Unit
+ 
+*   DIM_Religion_Master
+      *   Religion Code
+      *   Religion
+ 
+*   DIM_Ability_Master
+      *   Disability Code
+      *   Disability
 
 *   DIM_Key_Date
       *   Date
       *   Year
       *   Month
       *   Day
-
-*   DIM_From_Date
-      *   Date
-      *   Year
-      *   Month
-      *   Day
-
-
-*   DIM_To_Date
-      * Date
-      * Year
-      * Month
-      * Day
-        
+       
 ##  Power BI Dashboard  :
 
   ###  Executive Overview  :
