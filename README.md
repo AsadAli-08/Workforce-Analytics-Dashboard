@@ -231,7 +231,10 @@ The objective of this project is to transform fragmented HR data into actionable
   *  Visuals :
           Unit-Year wise Transfer Ins & Transfer Outs (Matrix)/ Cadre-Grade-Year wise Transfer Ins & Transfer Outs (Matrix)/ Transfer Ins & Transfer Outs Trend (Line Chart)/ Employee wise Transfer Details (Table)
   *  Observations   :
-      *
+      *   HPBP unit recorded the highest levels of both inward and outward mobility over the past decade
+      *   Executive mobility is significantly higher, at ~4x Supervisors and ~2.5x Workers, indicating greater role fluidity at senior levels
+      *   Mobility peaked in 2022 (~1,094 transfers) and has since stabilized at ~670 annual transfers
+      *   Corporate Office shows strong inward mobility, with inflows approximately 2x higher than outflows over the last 10 years
 
      
     
