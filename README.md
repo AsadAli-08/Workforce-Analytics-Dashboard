@@ -200,7 +200,15 @@ The objective of this project is to transform fragmented HR data into actionable
   *  Visuals :
           Unit-Cadre-Grade wise Breakup (Matrix)/ Function-Cadre-Grade wise Breakup (Matrix) / Employee wise Manpower Details (Table)
   *  Observations   :
-       *    
+      *   Urban/corporate locations show higher female representation compared to plant/site locations
+      *   BAP unit has the highest share of employees from socially backward communities (~87%)
+      *   HERP leads in inclusion of employees with special abilities (~6%)
+      *   IVP has the highest representation of religious minorities (~44%)
+      *   Medical and Legal functions demonstrate relatively strong gender diversity, with 40%+ female representation
+      *   Construction, Maintenance, and Production functions show very low female participation (<2%), indicating inclusion gaps
+      *   IVP and TP units have minimal female representation (<1%)
+      *   General Management reflects the lowest representation of socially backward communities
+      *   Medical and Legal functions also show the highest representation of minority groups
 
  ###  Workforce Age  :
   *  Filters :
