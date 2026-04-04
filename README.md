@@ -189,7 +189,6 @@ The objective of this project is to transform fragmented HR data into actionable
       *   Production function has the lowest average salary, consistent with workforce composition skewed towards Workers
       *   Despite lower average salaries, Production accounts for ~37% of total manpower cost due to its large workforce base
     
-
   ###  Workforce Diversity  :
   *  Filters :
           Unit/ Location/ Function/ Cadre/ Grade/ Gender/ Category/ Special Ability/ Religion
@@ -235,9 +234,7 @@ The objective of this project is to transform fragmented HR data into actionable
       *   Executive mobility is significantly higher, at ~4x Supervisors and ~2.5x Workers, indicating greater role fluidity at senior levels
       *   Mobility peaked in 2022 (~1,094 transfers) and has since stabilized at ~670 annual transfers
       *   Corporate Office shows strong inward mobility, with inflows approximately 2x higher than outflows over the last 10 years
-
-     
-    
+       
   ###  Workforce Attrition  :
   *  Filters :
           From Date/ To Date/ Unit/ Location/ Cadre/ Grade/ Reason for Attrition
@@ -246,7 +243,12 @@ The objective of this project is to transform fragmented HR data into actionable
   *  Visuals :
           Turnover & Involuntary Turnover Rate Trend (Line Chart)/ Unit-Cadre-Grade-Year wise Turnover & Involuntary Turnover Rate (Matrix)/ Employee wise Attrition Details (Table)
   *  Observations   :
-       *    
+      *   Voluntary attrition rate has increased over the past decade from ~4% to ~6.1%, indicating rising retention challenges
+      *   HPEP and EDN units report the highest voluntary attrition rates, highlighting localized risk areas
+      *   HPBP records the highest overall attrition rate (~6.69%) across units
+      *   Executives exhibit the highest voluntary turnover (~3%), followed by Supervisors and Workers
+      *   Within executives, mid-level grades (E2, E3, E4) show the highest attrition, suggesting pressure in the critical talent pipeline
+ 
 
 ##  Key Insights  :
 
