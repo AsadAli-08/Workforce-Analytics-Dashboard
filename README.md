@@ -252,6 +252,17 @@ The objective of this project is to transform fragmented HR data into actionable
 
 ##  Key Insights  :
 
+*   Workforce is highly concentrated in a few units (~74%) and heavily skewed towards Production (~47%) and Workers (~75%), indicating operational dependency and concentration risk
+*   Business performance is increasingly productivity-driven, with revenue and PAT trends closely aligned to per-employee metrics despite declining manpower
+*   Declining PAT per employee despite recovery in revenue per employee signals margin pressure and cost inefficiencies
+*   Cost structure is volume-driven, with manufacturing units contributing ~68% of total manpower cost, while executive roles remain the most expensive on a per capita basis
+*   Significant diversity gaps exist in core operational functions (Production, Maintenance, Construction) with female participation below 2%, unlike corporate functions
+*   Workforce is aging and mid-career heavy, with a large concentration in the 41–50 age group, indicating upcoming succession and reskilling challenges
+*   High executive mobility and net inflow into Corporate Office suggest centralized talent deployment and leadership agility
+*   Rising voluntary attrition (~4% to ~6.1%) indicates increasing retention risk, especially in specific units and functions
+*   Mid-level executives (E2–E4) show highest attrition, highlighting vulnerability in the leadership pipeline
+*   Combined trends of aging workforce, rising attrition, and low diversity in operations indicate long-term workforce sustainability risks
+
 ## Business Impact  :
 
 *  Enabled comprehensive workforce visibility across composition, diversity, cost, and risk dimensions
