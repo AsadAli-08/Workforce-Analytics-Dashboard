@@ -166,7 +166,7 @@ The objective of this project is to transform fragmented HR data into actionable
   *  Visuals :
           Revenue per Employee-Profit After Tax per Employee Trend (Line Chart)/ Revenue-PAT-Manpower Trend (Line Chart)/ Financial Year wise PAT per Employee & Revenue per Employee (Matrix)/ Financial Year wise PAT per Employee & Revenue per Employee (Matrix)
   * Observations   :
-    *    
+       *     
     
   ###  Workforce Cost Analytics  :
   *  Filters :
