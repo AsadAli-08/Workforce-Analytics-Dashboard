@@ -165,6 +165,8 @@ The objective of this project is to transform fragmented HR data into actionable
           Period/ Unit/ Location/ Function/ Cadre/ Grade
   *  Visuals :
           Revenue per Employee-Profit After Tax per Employee Trend (Line Chart)/ Revenue-PAT-Manpower Trend (Line Chart)/ Financial Year wise PAT per Employee & Revenue per Employee (Matrix)/ Financial Year wise PAT per Employee & Revenue per Employee (Matrix)
+  * Observations   :
+    *    
     
   ###  Workforce Cost Analytics  :
   *  Filters :
@@ -175,6 +177,8 @@ The objective of this project is to transform fragmented HR data into actionable
           Totals/ Averages
   *  Visuals :
           Unit-Location-Cadre-Grade wise Manpower Cost (Matrix)/ Function-Cadre-Grade wise Manpower Cost (Matrix) / Cadre-Grade wise Manpower Cost (Column Chart) / Employee wise Manpower Cost Details (Table)
+  *  Observations   :
+       *    
 
   ###  Workforce Diversity  :
   *  Filters :
@@ -185,6 +189,8 @@ The objective of this project is to transform fragmented HR data into actionable
           Counts/ Averages
   *  Visuals :
           Unit-Cadre-Grade wise Breakup (Matrix)/ Function-Cadre-Grade wise Breakup (Matrix) / Employee wise Manpower Details (Table)
+  *  Observations   :
+       *    
 
  ###  Workforce Age  :
   *  Filters :
@@ -193,6 +199,8 @@ The objective of this project is to transform fragmented HR data into actionable
           Real time Manpower Count/ Average Age
   *  Visuals :
           Unit-Location wise Average Age (Matrix)/ Function wise Average Age (Matrix)/ Age Group wise Manpower Breakup (Histogram)/ Employee wise Age Details (Table)
+  *  Observations   :
+       *    
     
   ###  Workforce Mobility  :
   *  Filters :
@@ -201,6 +209,8 @@ The objective of this project is to transform fragmented HR data into actionable
           Transfer Ins/ Transfer Outs
   *  Visuals :
           Unit-Year wise Transfer Ins & Transfer Outs (Matrix)/ Cadre-Grade-Year wise Transfer Ins & Transfer Outs (Matrix)/ Transfer Ins & Transfer Outs Trend (Line Chart)/ Employee wise Transfer Details (Table)
+  *  Observations   :
+       *    
     
   ###  Workforce Attrition  :
   *  Filters :
@@ -209,6 +219,8 @@ The objective of this project is to transform fragmented HR data into actionable
           Turnover Rate/ Voluntary TO Rate/ Total Turnover/ Involuntary Turnover/ Voluntary Turnover/ Retirements/ Resignations/ Deaths/ Terminations
   *  Visuals :
           Turnover & Involuntary Turnover Rate Trend (Line Chart)/ Unit-Cadre-Grade-Year wise Turnover & Involuntary Turnover Rate (Matrix)/ Employee wise Attrition Details (Table)
+  *  Observations   :
+       *    
 
 ##  Key Insights  :
 
