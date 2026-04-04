@@ -152,6 +152,8 @@ The objective of this project is to transform fragmented HR data into actionable
           Counts / Percentage %
   *  Visuals :
           Cadre-Grade wise Manpower Distribution (Column Chart)/ Unit wise Manpower Distribution (Column Chart)/ Function wise Manpower Distribution (Bar Chart)/ Unit-Location-Cadre-Grade wise Manpower Distribution (Matrix)/ Function-Cadre-Grade wise Manpower Distribution (Matrix) / Employee wise Master Date (Table)
+  *   Observations :
+            
     
   ###  Workforce Productivity  :
   *  Filters :
