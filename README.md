@@ -25,6 +25,13 @@ The objective of this project is to transform fragmented HR data into actionable
 *  HRIS / ERP Data (Employee master, movement, payroll, disciplinary records)
 *  Data Modeling: Star schema with fact tables for manpower, movement, cost, and events
 
+## Data Model  :
+
+###  Fact Tables  :
+
+
+###  Dimension Tables  :
+
 ##  Power BI Dashboard  :
 
   ###  Executive Overview  :
