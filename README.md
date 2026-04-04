@@ -265,11 +265,16 @@ The objective of this project is to transform fragmented HR data into actionable
 
 ## Business Impact  :
 
-*  Enabled comprehensive workforce visibility across composition, diversity, cost, and risk dimensions
-*  Supported diversity and inclusion monitoring aligned with organizational and compliance requirements
-*  Provided early signals for workforce aging and succession planning risks
-*  Improved decision-making by linking workforce structure with productivity and cost metrics
-*  Reduced manual HR reporting effort by delivering a centralized analytics solution
+*   Enabled a single source of truth for workforce data, eliminating fragmented HR reporting across units and functions
+*   Reduced manual reporting effort and turnaround time through automated, real-time dashboards
+*   Improved strategic workforce planning by providing visibility into manpower distribution, aging trends, and succession risks
+*   Strengthened cost optimization decisions by linking manpower cost with workforce composition and functional allocation
+*   Enabled leadership to track productivity (Revenue/PAT per employee) and align workforce size with business performance
+*   Provided early warning signals for attrition, mobility, and workforce risks, enabling proactive intervention
+*   Supported data-driven talent management, especially for critical segments like mid-level executives and high-mobility roles
+*   Enhanced DEI monitoring and compliance, highlighting gaps across functions and locations for targeted action
+*   Improved organizational agility by tracking internal mobility and enabling better workforce redeployment decisions
+*   Facilitated evidence-based decision-making for HR, Finance, and leadership by integrating operational, financial, and people analytics into a unified framework
 
 ## Author  :
 Asad Ali
