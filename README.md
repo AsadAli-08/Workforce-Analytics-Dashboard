@@ -97,6 +97,24 @@ The objective of this project is to transform fragmented HR data into actionable
 
 ###  Dimension Tables  :
 
+*   DIM_Unit_Master
+
+*   DIM_Location_Master
+
+*   DIM_Cadre_Master
+
+*   DIM_Grade_Master
+
+*   DIM_Function_Master
+
+*   DIM_Unit_Master
+
+*   DIM_Key_Date
+
+*   DIM_From_Date
+
+*   DIM_To_Date
+
 ##  Power BI Dashboard  :
 
   ###  Executive Overview  :
