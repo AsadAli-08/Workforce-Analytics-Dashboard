@@ -228,7 +228,12 @@ The objective of this project is to transform fragmented HR data into actionable
   *  Visuals :
           Unit-Year wise Transfer Ins & Transfer Outs (Matrix)/ Cadre-Grade-Year wise Transfer Ins & Transfer Outs (Matrix)/ Transfer Ins & Transfer Outs Trend (Line Chart)/ Employee wise Transfer Details (Table)
   *  Observations   :
-       *    
+      *   HPVP unit has the highest average age (~49 years), while PPPU has the youngest workforce (~41 years)
+      *   The largest employee concentration (13,434 employees) falls within the 41–50 age group, indicating a mid-career heavy workforce
+      *   Medical and General Management functions have the highest average age (~52 years), whereas Erection & Commissioning has the lowest (~42 years)
+      *   Supervisors exhibit a higher average age (~46 years) compared to other cadres, reflecting experience-heavy roles
+
+     
     
   ###  Workforce Attrition  :
   *  Filters :
