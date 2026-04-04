@@ -182,7 +182,13 @@ The objective of this project is to transform fragmented HR data into actionable
   *  Visuals :
           Unit-Location-Cadre-Grade wise Manpower Cost (Matrix)/ Function-Cadre-Grade wise Manpower Cost (Matrix) / Cadre-Grade wise Manpower Cost (Column Chart) / Employee wise Manpower Cost Details (Table)
   *  Observations   :
-       *    
+      *   Executives incur the highest average manpower cost, followed by Supervisors and Workers
+      *   Corporate Office and Delhi-based divisions have significantly higher average salaries compared to other units
+      *   Manufacturing units contribute ~68% of total manpower cost, indicating cost concentration in core operations
+      *   General Management records the highest average salary (~40 Cr), reflecting senior leadership cost structures
+      *   Production function has the lowest average salary, consistent with workforce composition skewed towards Workers
+      *   Despite lower average salaries, Production accounts for ~37% of total manpower cost due to its large workforce base
+    
 
   ###  Workforce Diversity  :
   *  Filters :
