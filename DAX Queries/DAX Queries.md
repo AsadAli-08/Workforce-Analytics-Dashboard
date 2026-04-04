@@ -4,28 +4,17 @@
 
 
 *     Manpower as on Key Date =
-                VAR key_date =
-                    LASTDATE ( Key_Date[Date] )
+
+                VAR Key_Date =
+                    LASTDATE ( DIM_Key_Date[Date] )
                 RETURN
-                    IF (
-                        key_date == TODAY (),
-                        COUNTX (
-                            FILTER (
-                                'Fact Emp Master',
-                                'Fact Emp Master'[DOJ] <= key_date
-                                    && 'Fact Emp Master'[DOR] >= key_date
-                                    && 'Fact Emp Master'[EMP_DEFUNCT] == "N"
-                            ),
-                            'Fact Emp Master'[Staff No.]
+                    COUNTX (
+                        FILTER (
+                            'FACT_Employee_Master',
+                            'FACT_Employee_Master'[DOJ] <= Key_Date
+                                && 'FACT_Employee_Master'[DOR] > Key_Date
                         ),
-                        COUNTX (
-                            FILTER (
-                                'Fact Emp Master',
-                                'Fact Emp Master'[DOJ] <= key_date
-                                    && 'Fact Emp Master'[DOR] >= key_date
-                            ),
-                            'Fact Emp Master'[Staff No.]
-                        )
+                        'FACT_Employee_Master'[Emp ID]
                     )
 
 
@@ -76,59 +65,43 @@
      
 ###  Workforce Diversity  :
 
+*      Female Count =
+                CALCULATE (
+                    COUNT ( FACT_Employee_Master[Emp ID] ),
+                    FACT_Employee_Master[Gender] = "F"
+                )
+
+
 *      Female % =
-              DIVIDE (
-                  CALCULATE (
-                      COUNT ( Fact Emp Master[Staff No.] ),
-                      KEEPFILTERS ( Fact Emp Master[Gender] = "Female" )
-                  ),
-                  CALCULATE (
-                      COUNT ( Fact Emp Master[Staff No.] ),
-                      REMOVEFILTERS ( Fact Emp Master[Gender] )
-                  ),
-                  0
-              )
+
+                [Female Count] / [Manpower as on Key Date]
+
+*      Ethnic Count = 
+                CALCULATE(COUNT(FACT_Employee_Attrition[Emp ID]), FACT_Employee_Master[Category] <> "UR")
+
 
 *      Ethnicity % =
-              DIVIDE (
-                  CALCULATE (
-                      COUNT ( Fact Emp Master[Staff No.] ),
-                      KEEPFILTERS ( Fact Emp Master[Category] <> "Gen" )
-                  ),
-                  CALCULATE (
-                      COUNT ( Fact Emp Master[Staff No.] ),
-                      REMOVEFILTERS ( Fact Emp Master[Category] )
-                  ),
-                  0
-              )
+                   [Ethnic Count] / [Manpower as on Key Date]
 
+
+* Specially Abled =
+                  CALCULATE (
+                  COUNT ( FACT_Employee_Attrition[Emp ID] ),
+                  NOT ( ISBLANK ( FACT_Employee_Master[Disability TYpe] ) )
+              )
 
 *      Specially Abled % =
-              DIVIDE (
-                  CALCULATE (
-                      COUNT ( Fact Emp Master[Staff No.] ),
-                      KEEPFILTERS ( Fact Emp Master[PHYSICALLY_CHALLENGE] = "Yes" )
-                  ),
-                  CALCULATE (
-                      COUNT ( Fact Emp Master[Staff No.] ),
-                      REMOVEFILTERS ( Fact Emp Master[Special Ability] )
-                  ),
-                  0
-              )
+                 [Disabled Count]/ [Manpower as on Key Date]
 
+
+*      Minority Count =
+                                    CALCULATE (
+                          COUNT ( FACT_Employee_Attrition[Emp ID] ),
+                          DIM_Religion_Master[Religion Code] <> 22
+                      )
 
 *      Religious Minority % =
-              DIVIDE (
-                  CALCULATE (
-                      COUNT ( Fact Emp Master[Staff No.] ),
-                      KEEPFILTERS ( Fact Emp Master[Religion] <> "Hinduism" )
-                  ),
-                  CALCULATE (
-                      COUNT ( Fact Emp Master[Staff No.] ),
-                      REMOVEFILTERS ( Fact Emp Master[Religion] )
-                  ),
-                  0
-              )
+                        [Minority Count]/ [Manpower as on Key Date]
 
 ###  Workforce Age  :
 
