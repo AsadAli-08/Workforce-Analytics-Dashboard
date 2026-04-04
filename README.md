@@ -50,6 +50,28 @@ The objective of this project is to transform fragmented HR data into actionable
     *  Grade Code
     *  Function Code
     *  Department Code
+ 
+*   FACT_Employee_Attrition
+    *   Emp ID
+    *   Attrition Date
+    *   Attrition Type 
+    *   Attrition Reason
+    *   Cadre at Attrition
+    *   Grade at Attrition
+    *   Unit at Attrition
+    *   Location at Attrition
+ 
+*   FACT_Employee_Mobility
+    *   Emp ID
+    *   Transfer Date
+    *   Transfer Type 
+    *   Transfer Reason
+    *   Cadre at Transfer
+    *   Grade at Transfer
+    *   From Unit
+    *   To Unit
+    *   From Location
+    *   To Location      
 
 
 ###  Dimension Tables  :
