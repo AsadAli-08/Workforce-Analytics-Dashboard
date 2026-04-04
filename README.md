@@ -166,7 +166,11 @@ The objective of this project is to transform fragmented HR data into actionable
   *  Visuals :
           Revenue per Employee-Profit After Tax per Employee Trend (Line Chart)/ Revenue-PAT-Manpower Trend (Line Chart)/ Financial Year wise PAT per Employee & Revenue per Employee (Matrix)/ Financial Year wise PAT per Employee & Revenue per Employee (Matrix)
   * Observations   :
-       *     
+      *   Revenue per Employee showed steady growth until 2010 (peak ~103 Cr), followed by fluctuations, with a renewed upward trend post-2020
+      *   PAT per Employee remained stable until 2003, surged to a peak (~14.66 Cr), then declined sharply to a low (~8.36 Cr in 2020), and has since stabilized at lower levels (~1.83 Cr)
+      *   Manpower trend declined until 2007, increased until 2012, and has been consistently declining thereafter
+      *   Overall Revenue trend closely mirrors Revenue per Employee, indicating productivity-driven performance
+      *   Similarly, PAT trend aligns with PAT per Employee, reinforcing the linkage between profitability and workforce efficiency
     
   ###  Workforce Cost Analytics  :
   *  Filters :
