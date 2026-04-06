@@ -111,155 +111,120 @@
 
 ###  Workforce Attrition  :
 
-*      Turnover Rate =
-                    VAR mpp_start =
-                        COUNTX (
-                            FILTER (
-                                'Fact Emp Master',
-                                'Fact Emp Master'[DOJ] <= FIRSTDATE ( 'Start Date Table'[Start Date] )
-                                    && 'Fact Emp Master'[DOR] >= FIRSTDATE ( 'Start Date Table'[Start Date] )
-                            ),
-                            'Emp Master for Name'[Staff No.]
-                        )
-                    VAR mpp_end =
-                        COUNTX (
-                            FILTER (
-                                'Fact Emp Master',
-                                'Fact Emp Master'[DOJ] <= LASTDATE ( 'End Date Table'[End Date] )
-                                    && 'Fact Emp Master'[DOR] >= LASTDATE ( 'End Date Table'[End Date] )
-                            ),
-                            'Fact Emp Master'[Staff No.]
-                        )
-                    VAR mpp_avg = ( mpp_start + mpp_end ) / 2
-                    RETURN
-                        COUNT ( FACT_EMP_ACTIONS[Staff No.] ) / mpp_avg
-
-
-*      Voluntary TO Rate =
-                    VAR mpp_start =
-                        COUNTX (
-                            FILTER (
-                                'Fact Emp Master',
-                                'EFact Emp Master'[DOJ] <= FIRSTDATE ( 'Start Date Table'[Start Date] )
-                                    && 'Fact Emp Master'[DOR] >= FIRSTDATE ( 'Start Date Table'[Start Date] )
-                            ),
-                            'Fact Emp Master'[Staff No.]
-                        )
-                    VAR mpp_end =
-                        COUNTX (
-                            FILTER (
-                                'Fact Emp Master',
-                                'Fact Emp Master'[DOJ] <= LASTDATE ( 'End Date Table'[End Date] )
-                                    && 'Fact Emp Master'[DOR] >= LASTDATE ( 'End Date Table'[End Date] )
-                            ),
-                            'Emp Master for Name'[Staff No.]
-                        )
-                    VAR mpp_avg = ( mpp_start + mpp_end ) / 2
-                    VAR vol_attrition =
-                        COUNTX (
-                            FILTER (
-                                FACT_EMP_ACTIONS,
-                                FACT_EMP_ACTIONS[ACTION_TYPE] = "DP"
-                                    || AND (
-                                        FACT_EMP_ACTIONS[ACTION_TYPE] = "BR",
-                                        FACT_EMP_ACTIONS[ACTION_REASON] = "N2"
-                                            || FACT_EMP_ACTIONS[ACTION_REASON] = "N4"
-                                    )
-                                    || AND (
-                                        FACT_EMP_ACTIONS[ACTION_TYPE] = "BS",
-                                        FACT_EMP_ACTIONS[ACTION_REASON] = "N0"
-                                            || FACT_EMP_ACTIONS[ACTION_REASON] = "N2"
-                                            || FACT_EMP_ACTIONS[ACTION_REASON] = "N3"
-                                    )
-                            ),
-                            FACT_EMP_ACTIONS[Staff No.]
-                        )
-                    RETURN
-                        vol_attrition / mpp_avg
-
+*        Total Turnover =
+                    CALCULATE (
+                        COUNT ( FACT_Employee_Attrition[To Unit Code] ),
+                        ( FACT_Employee_Attrition[Action Type] = "BR" )
+                            || ( FACT_Employee_Attrition[Action Type] = "BS" )
+                            || ( FACT_Employee_Attrition[Action Type] = "BT" ),
+                        FACT_Employee_Attrition[Attrition Date] >= MIN ( DIM_Key_Date[Date] ),
+                        FACT_Employee_Attrition[Attrition Date]
+                            <= MAX ( FACT_Employee_Attrition[Attrition Date] )
+                    )
+   
 *        Voluntary Turnover =
+                      CALCULATE (
+                          COUNT ( FACT_Employee_Attrition[Emp ID] ),
+                          FACT_Employee_Attrition[Action Type] = "DP"
+                              || AND (
+                                  FACT_Employee_Attrition[Action Type] = "BR",
+                                  FACT_Employee_Attrition[Reason Code] = "N2"
+                                      || FACT_Employee_Attrition[Reason Code] = "N4"
+                              )
+                              || AND (
+                                  FACT_Employee_Attrition[Action Type] = "BS",
+                                  FACT_Employee_Attrition[Reason Code] = "N0"
+                                      || FACT_Employee_Attrition[Reason Code] = "N2"
+                                      || FACT_Employee_Attrition[Reason Code] = "N3"
+                              ),
+                          FACT_Employee_Attrition[Attrition Date] >= MIN ( DIM_Key_Date[Date] ),
+                          FACT_Employee_Attrition[Attrition Date] <= MAX ( DIM_Key_Date[Date] )
+                      )
+*        Avg Manpower =
+                  VAR mpp_start =
                       COUNTX (
                           FILTER (
-                              FACT_EMP_ACTIONS,
-                              FACT_EMP_ACTIONS[ACTION_TYPE] = "DP"
-                                  || AND (
-                                      FACT_EMP_ACTIONS[ACTION_TYPE] = "BR",
-                                      FACT_EMP_ACTIONS[ACTION_REASON] = "N2"
-                                          || FACT_EMP_ACTIONS[ACTION_REASON] = "N4"
-                                  )
-                                  || AND (
-                                      FACT_EMP_ACTIONS[ACTION_TYPE] = "BS",
-                                      FACT_EMP_ACTIONS[ACTION_REASON] = "N0"
-                                          || FACT_EMP_ACTIONS[ACTION_REASON] = "N2"
-                                          || FACT_EMP_ACTIONS[ACTION_REASON] = "N3"
-                                  )
+                              'FACT_Employee_Master',
+                              'FACT_Employee_Master'[DOJ] <= FIRSTDATE ( 'DIM_Key_Date'[Date] )
+                                  && 'FACT_Employee_Master'[DOR] >= FIRSTDATE ( 'DIM_Key_Date'[Date] )
                           ),
-                          FACT_EMP_ACTIONS[Staff No.]
+                          'FACT_Employee_Master'[Emp ID]
                       )
+                  VAR mpp_end =
+                      COUNTX (
+                          FILTER (
+                              'FACT_Employee_Master',
+                              'FACT_Employee_Master'[DOJ] <= LASTDATE ( 'DIM_Key_Date'[Date] )
+                                  && 'FACT_Employee_Master'[DOR] >= LASTDATE ( 'DIM_Key_Date'[Date] )
+                          ),
+                          'FACT_Employee_Master'[Emp ID]
+                      )
+                  VAR mpp_avg = ( mpp_start + mpp_end ) / 2
+                  RETURN
+                      mpp_avg
+*        Turnover Rate =
+                [Total Turnover] / [Avg Manpower]
+
+
+*        Voluntary TO Rate = 
+                        [Voluntary Turnover]/ [Avg Manpower]
+
 
 *          Involuntary Turnover =
-                            COUNT ( FACT_EMP_ACTIONS[Staff No.] )
-                                - COUNTX (
-                                    FILTER (
-                                        FACT_EMP_ACTIONS,
-                                        FACT_EMP_ACTIONS[ACTION_TYPE] = "DP"
-                                            || AND (
-                                                FACT_EMP_ACTIONS[ACTION_TYPE] = "BR",
-                                                FACT_EMP_ACTIONS[ACTION_REASON] = "N2"
-                                                    || FACT_EMP_ACTIONS[ACTION_REASON] = "N4"
-                                            )
-                                            || AND (
-                                                FACT_EMP_ACTIONS[ACTION_TYPE] = "BS",
-                                                FACT_EMP_ACTIONS[ACTION_REASON] = "N0"
-                                                    || FACT_EMP_ACTIONS[ACTION_REASON] = "N2"
-                                                    || FACT_EMP_ACTIONS[ACTION_REASON] = "N3"
-                                            )
-                                    ),
-                                    FACT_EMP_ACTIONS[Staff No.]
-                                )
+                                COUNT ( FACT_Employee_Attrition[Emp ID] )
+                                    - COUNTX (
+                                        FILTER (
+                                            FACT_Employee_Attrition,
+                                            FACT_Employee_Attrition[Action Type] = "DP"
+                                                || AND (
+                                                    FACT_Employee_Attrition[Action Type] = "BR",
+                                                    FACT_Employee_Attrition[Reason Code] = "N2"
+                                                        || FACT_Employee_Attrition[Reason Code] = "N4"
+                                                )
+                                                || AND (
+                                                    FACT_Employee_Attrition[Action Type] = "BS",
+                                                    FACT_Employee_Attrition[Reason Code] = "N0"
+                                                        || FACT_Employee_Attrition[Reason Code] = "N2"
+                                                        || FACT_Employee_Attrition[Reason Code] = "N3"
+                                                )
+                                        ),
+                                        FACT_Employee_Attrition[Emp ID]
+                                    )
 
-
-*        Total Turnover =
-                      CALCULATE (
-                          COUNT ( FACT_EMP_ACTIONS[CURR_UNIT] ),
-                          ( FACT_EMP_ACTIONS[ACTION_TYPE] = "BR" )
-                              || ( FACT_EMP_ACTIONS[ACTION_TYPE] = "BS" )
-                              || ( FACT_EMP_ACTIONS[ACTION_TYPE] = "BT" )
-                      )
 
 
 *        Resignations =
                       COUNTX (
                           FILTER (
-                              FACT_EMP_ACTIONS,
-                              FACT_EMP_ACTIONS[ACTION_TYPE] = "BS"
-                                  && FACT_EMP_ACTIONS[ACTION_REASON] = "N0"
+                              FACT_Employee_Attrition,
+                              FACT_Employee_Attrition[Action Type] = "BS"
+                                  && FACT_Employee_Attrition[Reason Code] = "N0"
                           ),
-                          FACT_EMP_ACTIONS[Staff No.]
+                          FACT_Employee_Attrition[Emp ID]
+                      )
                       )
 
 *        Retirements =
                       COUNTX (
-                          FILTER ( FACT_EMP_ACTIONS, FACT_EMP_ACTIONS[ACTION_TYPE] = "BR" ),
-                          FACT_EMP_ACTIONS[Staff No.]
+                          FILTER ( FACT_Employee_Attrition, FACT_Employee_Attrition[Action Type] = "BR" ),
+                          FACT_Employee_Attrition[Emp ID]
                       )
-
 
 
 *        Terminations =
                       COUNTX (
-                          FILTER ( FACT_EMP_ACTIONS, FACT_EMP_ACTIONS[ACTION_TYPE] = "BT" ),
-                          FACT_EMP_ACTIONS[Staff No.]
+                          FILTER ( FACT_Employee_Attrition, FACT_Employee_Attrition[Action Type] = "BT" ),
+                          FACT_Employee_Attrition[Emp ID]
                       )
 
 *         Deaths =
                   COUNTX (
                       FILTER (
-                          FACT_EMP_ACTIONS,
-                          FACT_EMP_ACTIONS[ACTION_TYPE] = "BS"
-                              && FACT_EMP_ACTIONS[ACTION_REASON] = "N1"
+                          FACT_Employee_Attrition,
+                          FACT_Employee_Attrition[Action Type] = "BS"
+                              && FACT_Employee_Attrition[Reason Code] = "N1"
                       ),
-                      FACT_EMP_ACTIONS[Staff No.]
+                      FACT_Employee_Attrition[Emp ID]
                   )
 
 
