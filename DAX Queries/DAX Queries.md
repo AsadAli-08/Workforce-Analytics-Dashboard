@@ -109,15 +109,15 @@
 ###  Workforce Age  :
 
 *      Avg Age =
-                VAR key_date =
-                    MIN ( DIM_Key_Date[Date] )
+                VAR max_date =
+                    MAX ( DIM_Key_Date[Date] )
                 RETURN
                     AVERAGEX (
                         FILTER (
                             FACT_Employee_Master,
-                            FACT_Employee_Master[DOJ] <= key_date && FACT_Employee_Master[DOR] > key_date
+                            FACT_Employee_Master[DOJ] <= max_date && FACT_Employee_Master[DOR] > max_date
                         ),
-                        DATEDIFF ( FACT_Employee_Master[DOB], key_date, YEAR )
+                        DATEDIFF ( FACT_Employee_Master[DOB], max_date, YEAR )
                     )
 
 ###  Workforce Attrition  :
