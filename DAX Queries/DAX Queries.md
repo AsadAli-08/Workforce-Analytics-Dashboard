@@ -77,18 +77,18 @@
                 [Female Count] / [Manpower as on Key Date]
 
 *      Ethnic Count = 
-                CALCULATE(COUNT(FACT_Employee_Attrition[Emp ID]), FACT_Employee_Master[Category] <> "UR")
+                CALCULATE(COUNT(FACT_Employee_Master[Emp ID]), FACT_Employee_Master[Category] <> "UR")
 
 
 *      Ethnicity % =
                    [Ethnic Count] / [Manpower as on Key Date]
 
 
-* Specially Abled =
+*       Specially Abled =
                   CALCULATE (
-                  COUNT ( FACT_Employee_Attrition[Emp ID] ),
+                  COUNT ( FACT_Employee_Master[Emp ID] ),
                   NOT ( ISBLANK ( FACT_Employee_Master[Disability TYpe] ) )
-              )
+                    )
 
 *      Specially Abled % =
                  [Disabled Count]/ [Manpower as on Key Date]
@@ -96,7 +96,7 @@
 
 *      Minority Count =
                                     CALCULATE (
-                          COUNT ( FACT_Employee_Attrition[Emp ID] ),
+                          COUNT ( FACT_Employee_Master[Emp ID] ),
                           DIM_Religion_Master[Religion Code] <> 22
                       )
 
