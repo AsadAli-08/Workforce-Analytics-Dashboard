@@ -208,7 +208,7 @@ The objective of this project is to transform fragmented HR data into actionable
   *  Metrics :
           Real time Manpower Count/ Average Age
   *  Visuals :
-          Unit-Location wise Average Age (Matrix)/ Function wise Average Age (Matrix)/ Age Group wise Manpower Breakup (Histogram)/ Employee wise Age Details (Table)
+          Age Trend (Line Chart)/ Unit-Location wise Average Age (Matrix)/ Function wise Average Age (Matrix)/ Age Group wise Manpower Breakup (Histogram)/ Employee wise Age Details (Table)
   *  Observations   :
       *   HPVP unit has the highest average age (~49 years), while PPPU has the youngest workforce (~41 years)
       *   The largest employee concentration (13,434 employees) falls within the 41–50 age group, indicating a mid-career heavy workforce
